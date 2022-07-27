@@ -21,7 +21,7 @@ app.listen(config.get('server.port'), () => { // 서버 연결
     console.log(`Server Running on ${config.get('server.port')} Port!`);
 });
 
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     console.log("Success connecting DB");
 }).catch((err) => {
     console.error(err);
